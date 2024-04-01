@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px; /* Set a max-width for larger screens */
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center-aligns the text and inline-elements like buttons */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Aligns the form labels and inputs to the left */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: calc(100% - 22px); /* Adjust width to account for padding and border */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    cursor: pointer;
+    width: 100%; /* Makes the button span the full width of its container */
+    padding: 10px 0; /* Adjust padding to be uniform */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px; /* Adds some space above the button */
+}
+
+#results {
+    margin-top: 20px;
+    text-align: left; /* Aligns result text to the left */
+}
