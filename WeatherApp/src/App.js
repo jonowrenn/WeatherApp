@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import './App.css';
-import WeatherApp from './WeatherApp/weatherapp/src/WeatherApp.js'; // Make sure the path is correct
+import WeatherApp from '/Users/jonathanwrenn/Desktop/WeatherApp/weatherapp/src/WeatherApp'; // Make sure the path is correct
 
 
 function App() {
