@@ -2,13 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import './App.css';
-import WeatherApp from '/Users/jonathanwrenn/Desktop/WeatherApp/WeatherApp/src/weatherapp.js'; // Make sure the path is correct
+import WeatherApp from './WeatherApp/weatherapp/src/WeatherApp.js'; // Make sure the path is correct
 
 
 function App() {
   return (
     <div className="App">
-      <WeatherApp />
+      <WeatherApp/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
