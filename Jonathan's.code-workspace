@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "GuessTheNumber"
+		},
+		{
+			"path": "Portfolio-Website"
+		},
+		{
+			"path": "Python Tip Calculator"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Python Tip Calculator"
+	}
+}
