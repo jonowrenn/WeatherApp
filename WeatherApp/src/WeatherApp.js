@@ -31,7 +31,7 @@ return (
       {weather && (
         <div>
           <h2>{weather.name}</h2>
-          <p>Temperature: {weather.main.temp}°F</p>
+          <p>Temperature: {weather.main.temp}°C</p>
           <p>Weather: {weather.weather[0].main}</p>
           </div>
           )}
