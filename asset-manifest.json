@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/weather-app.github.io/static/css/main.f855e6bc.css",
-    "main.js": "/weather-app.github.io/static/js/main.881251d5.js",
-    "static/js/453.0ccb7fb4.chunk.js": "/weather-app.github.io/static/js/453.0ccb7fb4.chunk.js",
-    "index.html": "/weather-app.github.io/index.html",
-    "main.f855e6bc.css.map": "/weather-app.github.io/static/css/main.f855e6bc.css.map",
-    "main.881251d5.js.map": "/weather-app.github.io/static/js/main.881251d5.js.map",
-    "453.0ccb7fb4.chunk.js.map": "/weather-app.github.io/static/js/453.0ccb7fb4.chunk.js.map"
+    "main.css": "https://jonathanwrenn.com/weather-app.github.io/static/css/main.f855e6bc.css",
+    "main.js": "https://jonathanwrenn.com/weather-app.github.io/static/js/main.282f9ae3.js",
+    "static/js/453.0ccb7fb4.chunk.js": "https://jonathanwrenn.com/weather-app.github.io/static/js/453.0ccb7fb4.chunk.js",
+    "index.html": "https://jonathanwrenn.com/weather-app.github.io/index.html",
+    "main.f855e6bc.css.map": "https://jonathanwrenn.com/weather-app.github.io/static/css/main.f855e6bc.css.map",
+    "main.282f9ae3.js.map": "https://jonathanwrenn.com/weather-app.github.io/static/js/main.282f9ae3.js.map",
+    "453.0ccb7fb4.chunk.js.map": "https://jonathanwrenn.com/weather-app.github.io/static/js/453.0ccb7fb4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.881251d5.js"
+    "static/js/main.282f9ae3.js"
   ]
 }
