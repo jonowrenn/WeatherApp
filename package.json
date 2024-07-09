@@ -20,7 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://jonowrenn.github.io/weather-app",
+  "homepage": "https://jonathanwrenn.com/weather-app.github.io",
   "eslintConfig": {
     "extends": [
       "react-app",
