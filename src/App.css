@@ -286,13 +286,88 @@
   color: #ffffff;
 }
 
+/* ── Geo button ── */
+.weather-geo-btn {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 16px 18px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  transition: background 0.18s ease, transform 0.18s ease;
+  flex-shrink: 0;
+}
+.weather-geo-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateY(-1px);
+}
+.weather-geo-btn:disabled { opacity: 0.6; cursor: wait; }
+
+/* ── Chips section ── */
+.weather-chips-section { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+.weather-recent { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.weather-recent-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(200, 220, 255, 0.55);
+  margin-right: 2px;
+}
+.weather-chip--recent {
+  border-color: rgba(255, 255, 255, 0.08);
+  color: rgba(220, 235, 255, 0.75);
+  font-size: 0.88rem;
+}
+
+/* ── 5-Day Forecast ── */
+.weather-forecast { margin-top: 22px; }
+.weather-forecast-title {
+  margin: 0 0 14px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(200, 220, 255, 0.6);
+}
+.weather-forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+.weather-forecast-card {
+  padding: 14px 10px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.forecast-day {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(200, 225, 255, 0.7);
+}
+.forecast-icon { font-size: 1.6rem; line-height: 1; }
+.forecast-desc {
+  margin: 0;
+  font-size: 0.75rem;
+  color: rgba(220, 235, 255, 0.65);
+  text-transform: capitalize;
+  line-height: 1.3;
+}
+.forecast-temps { margin: 0; display: flex; gap: 6px; font-size: 0.88rem; }
+.forecast-high { color: #fff; font-weight: 700; }
+.forecast-low { color: rgba(200, 220, 255, 0.5); }
+
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @media (max-width: 640px) {
@@ -322,5 +397,8 @@
 
   .weather-details-grid {
     grid-template-columns: 1fr;
+  }
+  .weather-forecast-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
