@@ -2,7 +2,7 @@
 
 A polished React weather app that lets users search for any city and view live weather conditions in a clean, responsive interface.
 
-**Live demo:** https://weaather-dvjhf0vmq-jonathan-wrenns-projects.vercel.app/
+**Live demo:** https://weaather-app-seven.vercel.app/
 
 ---
 
