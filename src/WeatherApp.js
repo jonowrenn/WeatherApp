@@ -2,23 +2,40 @@ import React, { useMemo, useState } from 'react';
 
 const QUICK_CITIES = ['New York', 'London', 'Tokyo', 'Paris', 'San Francisco'];
 
+function getWeatherVisual(condition = '') {
+  const normalized = condition.toLowerCase();
+
+  if (normalized.includes('clear')) return '☀️';
+  if (normalized.includes('cloud')) return '☁️';
+  if (normalized.includes('rain')) return '🌧️';
+  if (normalized.includes('drizzle')) return '🌦️';
+  if (normalized.includes('snow')) return '❄️';
+  if (normalized.includes('thunder')) return '⛈️';
+  if (normalized.includes('mist') || normalized.includes('fog') || normalized.includes('haze')) return '🌫️';
+
+  return '🌤️';
+}
+
 function WeatherApp() {
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const themeClass = useMemo(() => {
-    const condition = weather?.weather?.[0]?.main?.toLowerCase() || '';
+  const condition = weather?.weather?.[0]?.main || '';
+  const weatherVisual = getWeatherVisual(condition);
 
-    if (condition.includes('clear')) return 'theme-clear';
-    if (condition.includes('cloud')) return 'theme-clouds';
-    if (condition.includes('rain') || condition.includes('drizzle')) return 'theme-rain';
-    if (condition.includes('snow')) return 'theme-snow';
-    if (condition.includes('thunder')) return 'theme-storm';
+  const themeClass = useMemo(() => {
+    const normalized = condition.toLowerCase();
+
+    if (normalized.includes('clear')) return 'theme-clear';
+    if (normalized.includes('cloud')) return 'theme-clouds';
+    if (normalized.includes('rain') || normalized.includes('drizzle')) return 'theme-rain';
+    if (normalized.includes('snow')) return 'theme-snow';
+    if (normalized.includes('thunder')) return 'theme-storm';
 
     return 'theme-default';
-  }, [weather]);
+  }, [condition]);
 
   const fetchWeatherData = async (cityOverride) => {
     const trimmedCity = (cityOverride ?? city).trim();
@@ -165,12 +182,10 @@ function WeatherApp() {
               </div>
 
               <div className="weather-main__icon-group">
-                <img
-                  className="weather-icon"
-                  src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
-                  alt={weather.weather[0].description}
-                />
-                <p className="weather-main-label">{weather.weather[0].main}</p>
+                <div className="weather-visual" aria-hidden="true">
+                  {weatherVisual}
+                </div>
+                <p className="weather-main-label">{condition}</p>
               </div>
             </div>
 
